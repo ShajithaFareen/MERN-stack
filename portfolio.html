@@ -2,67 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Portfolio - Shajitha Fareen</title>
 </head>
 <body>
-    <header>
-        <h1>Shajitha Fareen</h1>
-        <p>An Aspiring Computer Science & Engineering Student with a learning mindset and looking towards applying the theoritical Knowledge in Problem Solving</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>Introduction</h2>
-            <p>
-                Hello! I am a passionate developer who loves <b>coding</b> and <i>problem-solving</i>. 
-                I believe that <u>learning never stops</u>. Sometimes I write <s>bugs</s> features, 
-                but I always ensure the <code>code</code> is efficient. I am currently working on 
-                a project involving H<sub>2</sub>O and advanced math like x<sup>2</sup>.
-            </p>
 
-            <article>
-                <h3>My Career Goals</h3>
-                <p>My primary goal is to become a full-stack engineer and contribute to open-source projects that make a difference in the world.</p>
-            </article>
+<header>
+    <h1>Shajitha Fareen</h1>
+    <p>Aspiring Computer Science & Engineering Student with a learning mindset, applying theoretical knowledge to real-world problem solving.</p>
 
-            <details>
-                <summary>Click here for a fun fact about me!</summary>
-                <p>I once spent three hours debugging a semicolon mistake. Character building!</p>
-            </details>
-        </section>
+    <!-- Internal Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#media">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <section  id="skills">
+<main>
 
-            <h3>Favorite Programming Languages (Ranked)</h3>
-            <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Python</li>
-                <li>Java</li>
-            </ol>
-        </section>
-        
-        <section id="hobbies">
-            <h3>My Hobbies & Interests</h3>
-            <ul>
-                <li>Photography</li>
-                <li>Hiking in the mountains</li>
-                <li>Playing chess</li>
-            </ul>
-        </section>
+<!-- ABOUT SECTION -->
+<section id="about">
+    <h2>About Me</h2>
 
-        <section id="contact">
-            <h3>8765459823</h3>
-        </section>
+    <article>
+        <h3>My Introduction</h3>
+        <p>
+            Hello! I am passionate about <strong>coding</strong> and <em>problem-solving</em>. 
+            I believe <u>learning never stops</u>. I enjoy building projects and improving my skills every day.
+        </p>
+    </article>
 
-    </main>
+    <!-- Details + Summary -->
+    <details>
+        <summary>Click to View My Goals</summary>
+
+        <h4>Long-Term Goals</h4>
+        <p>Specialize in AI or Cybersecurity and grow into a technical leadership role.</p>
+
+        <h4>Short-Term Goals</h4>
+        <p>Build and publish 3 projects on GitHub (Web App, Mobile App, ML Model).</p>
+    </details>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills">
+    <h2>Skills</h2>
+
+    <h3>Programming Languages</h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ol>
+
+    <!-- Progress Bars -->
+    <h3>Skill Levels</h3>
+
+    <label for="html">HTML:</label>
+    <progress id="html" value="80" max="100">80%</progress><br><br>
+
+    <label for="css">CSS:</label>
+    <progress id="css" value="70" max="100">70%</progress><br><br>
+
+    <label for="python">Python:</label>
+    <progress id="python" value="75" max="100">75%</progress>
+</section>
+
+<!-- ACADEMIC TABLE -->
+<section id="academics">
+    <h2>Academic Performance</h2>
+
+    <table border="1">
+        <caption>Academic details</caption>
+        <tr>
+            <th>Class</th>
+            <th>Marks</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>SSLC</td>
+            <td>All Pass</td>
+            <td>All Pass</td>
+        </tr>
+        <tr>
+            <td>Higher Secondary</td>
+            <td>520</td>
+            <td>86%</td>
+        </tr>
+        <tr>
+            <td>CGPA</td>
+            <td>-</td>
+            <td>9.0</td>
+        </tr>
+    </table>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form action="#" method="post">
+
+        <!-- Name -->
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Radio Buttons -->
+        <h3>Gender:</h3>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br><br>
+
+        <!-- Checkboxes -->
+        <h3>Interests:</h3>
+        <input type="checkbox" id="coding" name="interest" value="Coding">
+        <label for="coding">Coding</label>
+
+        <input type="checkbox" id="dedugging" name="interest" value="dedugging">
+        <label for="dedugging">Dedugging</label>
+
+        <input type="checkbox" id="admin" name="interest" value="admin">
+        <label for="admin">Administation</label><br><br>
+
+        <!-- Select Dropdown -->
+        <label for="contactMethod">Preferred Contact Method:</label><br>
+        <select id="contactMethod" name="contactMethod">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="linkedin">LinkedIn</option>
+        </select><br><br>
+
+        <!-- Submit -->
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Shajitha Fareen. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
