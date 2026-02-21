@@ -1,47 +1,75 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const Projects = () => {
-    const [showMore, setShowMore] = useState(false);
+function Projects() {
+    const [show, setShow] = useState(false);
 
     const projects = [
-    {
-        name: "Portfolio Website",
-        description: "A personal portfolio built using React and Vite.",
-    },
-    {
-        name: "Todo App",
-        description: "A task manager app using React hooks.",
-    },
-    {
-        name: "Weather App",
-        description: "Weather app using API integration.",
-    },
+    { name: "MERN Blog App", desc: "Full-stack blogging platform using MERN." },
+    { name: "Portfolio Website", desc: "Personal portfolio built with React." },
+    { name: "E-commerce App", desc: "Online store with authentication." }
     ];
 
     return (
-    <section style={{ padding: "50px" }}>
-        <h2>My Projects</h2>
+    <section id="projects" style={{ backgroundColor: "#f4f4f4" }}>
+        <div className="container">
 
-        {projects.map((project, index) => (
+        <h2 style={{ textAlign: "center", marginBottom: "40px" }}>
+            My Projects
+        </h2>
+
+        {/* GRID LAYOUT */}
         <div
-            key={index}
             style={{
-            border: "1px solid #ccc",
-            padding: "20px",
-            margin: "20px 0",
-        }}
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "30px"
+            }}
         >
-            <h3>{project.name}</h3>
+            {projects.map((project, index) => (
+            
+            /* CARD STARTS HERE */
+            <div
+                key={index}
+                style={{
+                padding: "20px",
+                borderRadius: "10px",
+                boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+                backgroundColor: "white",
+                transition: "0.3s"
+            }}
+            >
+                <h3 style={{ marginBottom: "15px" }}>
+                {project.name}
+                </h3>
 
-            {showMore && <p>{project.description}</p>}
+                {show && (
+                <p style={{ marginBottom: "15px" }}>
+                    {project.desc}
+                </p>
+                )}
 
-        <button onClick={() => setShowMore(!showMore)}>
-            {showMore ? "Show Less" : "Show More"}
-            </button>
+                <button
+                style={{
+                    padding: "8px 15px",
+                    backgroundColor: "#00adb5",
+                    color: "white",
+                    border: "none",
+                    cursor: "pointer",
+                    borderRadius: "5px"
+                }}
+                onClick={() => setShow(!show)}
+                >
+                {show ? "Show Less" : "Show More"}
+                </button>
+            </div>
+            /* CARD ENDS HERE */
+
+            ))}
         </div>
-        ))}
+
+        </div>
     </section>
-);
-};
+    );
+}
 
 export default Projects;

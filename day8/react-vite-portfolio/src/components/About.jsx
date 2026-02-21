@@ -1,21 +1,19 @@
-import React from "react";
-import styles from "./About.module.css";
+import styles from "../styles/About.module.css";
 
-const About = () => {
+function About() {
     return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
         <h2>About Me</h2>
-        <p><strong>Education:</strong> B.Tech in Computer Science</p>
+        <p><strong>Education:</strong> B.Tech CSE</p>
 
-        <h3>Skills</h3>
+        <h3>Skills:</h3>
         <ul>
-            <li>React</li>
-            <li>JavaScript</li>
-            <li>HTML & CSS</li>
-            <li>Git & GitHub</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Node.js, Express</li>
+        <li>MongoDB</li>
         </ul>
     </section>
     );
-};
-
+}
+<div className="container"></div>
 export default About;

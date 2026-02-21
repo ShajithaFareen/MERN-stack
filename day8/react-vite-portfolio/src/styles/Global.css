@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}

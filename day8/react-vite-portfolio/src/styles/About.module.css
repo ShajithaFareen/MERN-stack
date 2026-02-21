@@ -1,0 +1,29 @@
+.about {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.about h2 {
+    color: #1e1e2f;
+}
+
+.about ul {
+    margin-top: 10px;
+}
+.about {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.about h2 {
+    color: #1e1e2f;
+}
+.about {
+    background-color: #f9f9f9;
+}
+
+.aboutContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}

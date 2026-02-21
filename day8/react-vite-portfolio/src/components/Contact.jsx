@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const Contact = () => {
+function Contact() {
     const [message, setMessage] = useState("");
 
     const handleClick = () => {
     setMessage("Thank you for contacting me!");
-    };
+};
 
     return (
-    <section style={{ padding: "50px", textAlign: "center" }}>
+    <section id="contact" style={{ padding: "50px", textAlign: "center" }}>
         <h2>Contact Me</h2>
-        <p>Email: your@email.com</p>
-        <p>Phone: +1234567890</p>
+        <p>Email: shajitha@email.com</p>
+        <p>Phone: 9876543210</p>
 
         <button onClick={handleClick}>Send Message</button>
 
         {message && <p>{message}</p>}
     </section>
 );
-};
+}
 
 export default Contact;

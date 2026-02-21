@@ -1,26 +1,52 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const Home = () => {
-    const [showIntro, setShowIntro] = useState(true);
+function Home() {
+    const [showMore, setShowMore] = useState(false);
 
-return (
-    <section style={{ padding: "50px", textAlign: "center" }}>
-        <h1 style={{ color: "#00adb5" }}>Your Name</h1>
+    return (
+    <section id="home">
+        <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        
+        <div>
+            <h1 style={{ color: "#00adb5", fontSize: "48px" }}>
+            Hi, I'm Shajitha Fareen
+            </h1>
 
-        <h2>Frontend Developer</h2>
+            <h3 style={{ marginTop: "10px" }}>
+            B.Tech Computer Science Engineer
+            </h3>
 
-        {showIntro && (
-        <p>
-            I am a passionate developer who loves building modern web
-            applications using React and JavaScript.
-        </p>
-        )}
+            <p style={{ marginTop: "20px", maxWidth: "500px" }}>
+            Passionate MERN Stack Developer building modern web applications.
+            </p>
 
-        <button onClick={() => setShowIntro(!showIntro)}>
-        {showIntro ? "Hide Intro" : "Show Intro"}
-        </button>
+            {showMore && (
+            <p style={{ marginTop: "10px", maxWidth: "500px" }}>
+                I am a fresher looking for opportunities to contribute to real-world projects and grow as a full-stack developer.
+            </p>
+            )}
+
+            <button
+            style={{ marginTop: "20px", padding: "10px 20px", cursor: "pointer" }}
+            onClick={() => setShowMore(!showMore)}
+            >
+            {showMore ? "Show Less" : "Show More"}
+            </button>
+        </div>
+
+        {/* Right Side (Profile Placeholder) */}
+        <div>
+            <div style={{
+            width: "250px",
+            height: "250px",
+            backgroundColor: "#00adb5",
+            borderRadius: "50%"
+            }}></div>
+        </div>
+
+        </div>
     </section>
 );
-};
+}
 
 export default Home;
